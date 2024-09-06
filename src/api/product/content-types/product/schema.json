@@ -4,17 +4,37 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
-    "media": {
+    "description": {
+      "type": "blocks"
+    },
+    "banner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "instantDelivery": {
+      "type": "boolean"
+    },
+    "files": {
       "allowedTypes": [
         "images",
         "files",
@@ -23,6 +43,17 @@
       ],
       "type": "media",
       "multiple": true
+    },
+    "whatslncluded": {
+      "type": "blocks"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "TECH",
+        "MARKETING",
+        "SECURITY"
+      ]
     }
   }
 }
